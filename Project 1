@@ -1,0 +1,23 @@
+# open a file 
+file = input("please input file as .txt: ")
+import os.path
+if os.path.exists(file):
+    print("it exists")
+else:
+    file = input("please name file that exists: ")
+
+with open(file) as file_doc:
+    file_content = file_doc.read()
+
+# tokenize the sentences
+import re # Import the library of regular expressions
+# output = re.sub('\.\.\.', '***', file_content, flags=re.I)
+# print(output)
+
+sentence_tokenization = re.findall(r"[^\.!\?]+[\.!\?]+", file_content)
+abbreviations = re.findall(r"[A-Z{2,4}]\w+[.]", file_content)
+
+for x in abbreviations:
+     sentence_tokenization.remove(x)
+print(sentence_tokenization)
+print(len(sentence_tokenization))
