@@ -1,3 +1,12 @@
+sample_text= """In this assignment, you will write a personal narrative that shares an experience 
+from your life and reflects on its significance in order to make it meaningful for 
+Mr. readers. Sharing experiences through stories and narratives is fundamental to all 
+successful communication. Compelling narratives are crucial to promoting empathy, understanding, 
+and action in any persuasive communication. As you prepare for subsequent assignments, you should 
+consider how all successful communication, even when based on our personal experiences and 
+perspectives, is ultimately a dialogue with others.
+"""
+
 # open a file 
 file = input("please input file as .txt: ")
 import os.path
